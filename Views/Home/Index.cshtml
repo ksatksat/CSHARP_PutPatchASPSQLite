@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="card">
+    <h1>HTTP PUT and PATCH Demo</h1>
+    <p>
+        This app made with ASP NET Core, MVC, vanilla HTML, CSS, JS, SQLite.<br />
+        Tick a checkbox to send a <strong>PATCH</strong> (changes only <code>isDone</code>).<br />
+        Press <em>Edit</em> and save to send a <strong>PUT</strong> (replaces the whole item).
+    </p>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <form id="edit-form" class="edit-form" hidden autocomplete="off">
+        <h2>Edit item <span id="edit-id"></span> (PUT)</h2>
+        <label>Title
+            <input id="edit-title" type="text" maxlength="100" required />
+        </label>
+        <label>Description
+            <input id="edit-description" type="text" maxlength="200" />
+        </label>
+        <label class="check">
+            <input id="edit-done" type="checkbox" /> Done
+        </label>
+        <div class="buttons">
+            <button type="submit">Save (PUT)</button>
+            <button type="button" id="cancel-btn" class="secondary">Cancel</button>
+        </div>
+    </form>
+
+    <h2>Last request</h2>
+    <pre id="log" class="log">Nothing sent yet.</pre>
+</div>
